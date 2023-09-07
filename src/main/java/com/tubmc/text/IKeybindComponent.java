@@ -10,7 +10,7 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
 public non-sealed interface IKeybindComponent extends IComponent {
 	
 	public static @NotNull IKeybindComponent of(final @NotNull @DisallowsEmptyString String keybind) {
-		return IMPLEMENTATION.createKeybind(keybind);
+		return AbstractImplementation.IMPLEMENTATION.createKeybind(keybind);
 	}
 	
 	public static @NotNull KeybindComponentBuilder builder(@NotNull final String keybind) {

@@ -13,19 +13,19 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
 public non-sealed interface ITranslatableComponent extends IComponent {
 	
 	public static @NotNull ITranslatableComponent of(@NotNull final String translationKey) {
-		return IMPLEMENTATION.createTranslatable(translationKey, null, null);
+		return AbstractImplementation.IMPLEMENTATION.createTranslatable(translationKey, null, null);
 	}
 	
 	public static @NotNull ITranslatableComponent of(@NotNull final String translationKey, @NotNull final String fallback) {
-		return IMPLEMENTATION.createTranslatable(translationKey, fallback, null);
+		return AbstractImplementation.IMPLEMENTATION.createTranslatable(translationKey, fallback, null);
 	}
 	
 	public static @NotNull ITranslatableComponent of(@NotNull final String translationKey, @NotNull final String fallback, @NotNull final Collection<IComponent> inserts) {
-		return IMPLEMENTATION.createTranslatable(translationKey, fallback, inserts);
+		return AbstractImplementation.IMPLEMENTATION.createTranslatable(translationKey, fallback, inserts);
 	}
 	
 	public static @NotNull ITranslatableComponent of(@NotNull final String translationKey, @NotNull final Collection<IComponent> inserts) {
-		return IMPLEMENTATION.createTranslatable(translationKey, null, inserts);
+		return AbstractImplementation.IMPLEMENTATION.createTranslatable(translationKey, null, inserts);
 	}
 	
 	public static @NotNull TranslatableComponentBuilder builder(@NotNull final String translationKey) {

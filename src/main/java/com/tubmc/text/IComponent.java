@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.annotations.ApiStatus.Internal;
 
 /**
  *    Copyright 2023 TubMC.com
@@ -36,12 +35,6 @@ import org.jetbrains.annotations.ApiStatus.Internal;
  */
 public sealed interface IComponent extends Cloneable, IStyled, IInteractable permits ITranslatableComponent, IScoreboardComponent, ISelectedComponent, IKeybindComponent, ILiteralComponent {
 	/**
-	 * The instance of {@link IImplementation} that is used internally for {@link IComponent} creation
-	 * @since 1.0.0
-	 */
-	@Internal
-	static IImplementation IMPLEMENTATION = null;
-	/**
 	 * Conjoins two {@link IComponent}'s into one
 	 * 
 	 * @since 1.0.0
@@ -50,7 +43,7 @@ public sealed interface IComponent extends Cloneable, IStyled, IInteractable per
 	 * @return An {@link IComponent} with the provided {@link IComponent}'s as it's children
 	 */
 	public static @NotNull IComponent union(@NotNull final IComponent firstComponent, @NotNull final IComponent secondComponent) {
-		final IComponent ret = IMPLEMENTATION.createLiteral("");
+		final IComponent ret = AbstractImplementation.IMPLEMENTATION.createLiteral("");
 		ret.setChildren(List.of(firstComponent, secondComponent));
 		return ret;
 	}

@@ -11,7 +11,7 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
 public non-sealed interface ILiteralComponent extends IComponent {
 	
 	public static @NotNull ILiteralComponent of(final @NotNull @AllowsEmptyString String text) {
-		return IMPLEMENTATION.createLiteral(text);
+		return AbstractImplementation.IMPLEMENTATION.createLiteral(text);
 	}
 	
 	public static @NotNull LiteralComponentBuilder builder(@NotNull final String text) {

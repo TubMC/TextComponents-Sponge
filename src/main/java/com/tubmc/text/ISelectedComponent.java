@@ -17,11 +17,11 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
 public non-sealed interface ISelectedComponent extends IComponent, ISelectorBased {
 	
 	public static @NotNull ISelectedComponent of(@NotNull @DisallowsEmptyString final String selector) {
-		return IMPLEMENTATION.createSelector(selector, null);
+		return AbstractImplementation.IMPLEMENTATION.createSelector(selector, null);
 	}
 	
 	public static @NotNull ISelectedComponent of(@NotNull @DisallowsEmptyString final String selector, @NotNull final IComponent component) {
-		return IMPLEMENTATION.createSelector(selector, component);
+		return AbstractImplementation.IMPLEMENTATION.createSelector(selector, component);
 	}
 	
 	public static @NotNull SelectorComponentBuilder builder(@NotNull final String selector) {

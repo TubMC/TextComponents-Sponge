@@ -17,11 +17,11 @@ public non-sealed interface IScoreboardComponent extends IComponent, ISelectorBa
 	public static final @NotNull @DisallowsEmptyString String SELF_TARGET_SELECTOR = "*";
 	
 	public static @NotNull IScoreboardComponent of(@NotNull @DisallowsEmptyString final String selector, @NotNull @DisallowsEmptyString final String objective) {
-		return IMPLEMENTATION.createScoreboard(selector, objective, null);
+		return AbstractImplementation.IMPLEMENTATION.createScoreboard(selector, objective, null);
 	}
 	
 	public static @NotNull IScoreboardComponent of(@NotNull @DisallowsEmptyString final String selector, @NotNull @DisallowsEmptyString final String objective, @NotNull @DisallowsEmptyString final String value) {
-		return IMPLEMENTATION.createScoreboard(selector, objective, value);
+		return AbstractImplementation.IMPLEMENTATION.createScoreboard(selector, objective, value);
 	}
 	
 	public static @NotNull ScoreboardComponentBuilder builder(@NotNull @DisallowsEmptyString final String selector, @NotNull @DisallowsEmptyString final String objective) {
