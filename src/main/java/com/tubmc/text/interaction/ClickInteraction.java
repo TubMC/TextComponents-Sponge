@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 import fun.bb1.objects.annotations.DisallowsEmptyString;
 
-public record ClickInteraction(
+public final record ClickInteraction(
 		/**
 		 * The {@link HoverType} to use
 		 * 
