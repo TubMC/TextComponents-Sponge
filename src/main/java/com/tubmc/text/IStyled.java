@@ -42,28 +42,28 @@ sealed interface IStyled permits IComponent {
 	 */
 	public boolean isBold();
 	
-	public boolean setBold(final boolean isBold);
+	public void setBold(final boolean isBold);
 	/**
 	 * @since 1.0.0
 	 * @return If this text will display as italicised
 	 */
 	public boolean isItalic();
 	
-	public boolean setItalic(final boolean isItalic);
+	public void setItalic(final boolean isItalic);
 	/**
 	 * @since 1.0.0
 	 * @return If this text will display as underlined
 	 */
 	public boolean isUnderlined();
 	
-	public boolean setUnderlined(final boolean isUnderlined);
+	public void setUnderlined(final boolean isUnderlined);
 	/**
 	 * @since 1.0.0
 	 * @return If this text will display with a line through it
 	 */
 	public boolean isStrikedThrough();
 	
-	public boolean setStrikeThrough(final boolean isStrikedThrough);
+	public void setStrikeThrough(final boolean isStrikedThrough);
 	/**
 	 * @since 1.0.0
 	 * @return If this text will be displayed randomly
@@ -71,7 +71,7 @@ sealed interface IStyled permits IComponent {
 	 */
 	public boolean isObfuscated();
 	
-	public boolean setObfuscated(final boolean isObfuscated);
+	public void setObfuscated(final boolean isObfuscated);
 	/**
 	 * @since 1.0.0
 	 * @return The font for this {@link IComponent} (or null if using the default one)
