@@ -32,7 +32,7 @@ public sealed abstract class AbstractComponentBuilder<T extends AbstractComponen
 	protected final @NotNull Set<Style> styles = new HashSet<Style>();
 	protected @Nullable String font;
 	protected @Nullable ClickInteraction click;
-	protected @Nullable HoverInteraction hover;
+	protected @Nullable HoverInteraction<?> hover;
 	protected @Nullable List<IComponent> children;
 	
 	public final @NotNull T color(@NotNull final Color color) {
@@ -100,18 +100,18 @@ public sealed abstract class AbstractComponentBuilder<T extends AbstractComponen
 		return self();
 	}
 	
-	public final @NotNull T hover(@NotNull final HoverInteraction hover) {
+	public final @NotNull T hover(@NotNull final HoverInteraction<?> hover) {
 		this.hover = hover;
 		return self();
 	}
 	
 	public final @NotNull T tooltip(@NotNull @DisallowsEmptyString final String display) {
-		this.hover = new HoverInteraction(HoverType.TEXT, ILiteralComponent.of(display));
+		this.hover = new HoverInteraction<IComponent>(HoverType.TEXT, ILiteralComponent.of(display));
 		return self();
 	}
 	
 	public final @NotNull T tooltip(@NotNull @DisallowsEmptyString final IComponent display) {
-		this.hover = new HoverInteraction(HoverType.TEXT, display);
+		this.hover = new HoverInteraction<IComponent>(HoverType.TEXT, display);
 		return self();
 	}
 	

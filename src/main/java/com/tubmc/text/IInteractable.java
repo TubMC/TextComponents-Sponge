@@ -49,13 +49,13 @@ sealed interface IInteractable permits IComponent {
 	 * @since 1.0.0
 	 * @return The {@link HoverInteraction} (if one is set)
 	 */
-	public @Nullable HoverInteraction getHovering();
+	public @Nullable HoverInteraction<?> getHovering();
 	/**
 	 * Replaces the current {@link HoverInteraction} with the provided one
 	 * 
 	 * @param interaction The {@link HoverInteraction} to use
 	 * @since 1.0.0
 	 */
-	public void setHovering(final @Nullable HoverInteraction interaction);
+	public void setHovering(final @Nullable HoverInteraction<?> interaction);
 	
 }
