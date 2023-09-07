@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.tubmc</groupId>
+	<artifactId>text-components</artifactId>
+	<version>1.0.0</version>
+	<name>TextComponents</name>
+	<description>A simple way to stylise mc text</description>
+	<url>https://github.com/TubMC/TextComponents</url>
+	<inceptionYear>2023</inceptionYear>
+	<packaging>jar</packaging>
+	
+	<issueManagement>
+		<system>Git</system>
+		<url>https://github.com/TubMC/TextComponents/issues</url>
+	</issueManagement>
+	
+	<properties>
+		<java.version>17</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+		<repository>
+			<id>repo</id>
+			<url>https://repo.bb1.fun/releases</url>
+		</repository>
+	</repositories>
+	
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<distribution>repo</distribution>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+	
+	<build>
+		<defaultGoal>clean install</defaultGoal>
+		<finalName>TextComponents</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<release>17</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>fun.bb1</groupId>
+			<artifactId>objects</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jetbrains</groupId>
+			<artifactId>annotations</artifactId>
+			<version>24.0.0</version>
+		</dependency>
+	</dependencies>
+</project>
