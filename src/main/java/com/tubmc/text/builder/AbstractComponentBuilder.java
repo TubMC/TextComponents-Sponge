@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 import org.jetbrains.annotations.ApiStatus.Internal;
 import org.jetbrains.annotations.NotNull;
@@ -125,6 +126,10 @@ public sealed abstract class AbstractComponentBuilder<T extends AbstractComponen
 		return self();
 	}
 	
+	public final @NotNull T modify(@NotNull final StagedComponent stagedComponent) {
+		return self();
+	}
+	
 	public final @NotNull T then(@NotNull @AllowsEmptyString final String literal) {
 		return this.then(ILiteralComponent.of(literal));
 	}
@@ -133,6 +138,10 @@ public sealed abstract class AbstractComponentBuilder<T extends AbstractComponen
 		if (this.children == null) this.children = new ArrayList<IComponent>();
 		this.children.add(component);
 		return self();
+	}
+	
+	public final @NotNull T then(@NotNull final Supplier<IComponent> component) {
+		return this.then(component.get());
 	}
 	
 	private final @NotNull T then(@NotNull final ITypedBuilder<IComponent> builder) {
@@ -183,6 +192,52 @@ public sealed abstract class AbstractComponentBuilder<T extends AbstractComponen
 		if (this.hover != null) component.setHovering(this.hover);
 		if (this.children != null && this.children.size() != 0) component.setChildren(this.children);
 		return component;
+	}
+	
+	public class StagedComponent {
+		
+		public void setColor(final @Nullable Color newColor) {
+			color(newColor);
+		}
+
+		
+		public void setFont(final @Nullable @AllowsEmptyString String newFont) {
+			font(newFont);
+		}
+		
+		public void setBold(final boolean isBold) {
+			if (isBold) style(Style.BOLD);
+			else styles.remove(Style.BOLD);
+		}
+		
+		public void setItalic(final boolean isItalic) {
+			if (isItalic) style(Style.ITALIC);
+			else styles.remove(Style.ITALIC);
+		}
+		
+		public void setUnderlined(final boolean isUnderlined) {
+			if (isUnderlined) style(Style.UNDERLINE);
+			else styles.remove(Style.UNDERLINE);
+		}
+		
+		public void setStrikeThrough(final boolean isStrikedThrough) {
+			if (isStrikedThrough) style(Style.STRIKETHOUGH);
+			else styles.remove(Style.STRIKETHOUGH);
+		}
+		
+		public void setObfuscated(final boolean isObfuscated) {
+			if (isObfuscated) style(Style.OBFUSCATED);
+			else styles.remove(Style.OBFUSCATED);
+		}
+		
+		public void setHover(final @Nullable HoverInteraction<?> hoverInteraction) {
+			hover(hoverInteraction);
+		}
+		
+		public void setClick(final @Nullable ClickInteraction clickInteraction) {
+			click(clickInteraction);
+		}
+		
 	}
 	
 }
