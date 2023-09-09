@@ -138,7 +138,7 @@ public sealed abstract class AbstractComponentBuilder<T extends AbstractComponen
 	
 	public final @NotNull T then(@NotNull final IComponent component) {
 		if (this.children == null) this.children = new ArrayList<IComponent>();
-		this.children.add(component);
+		this.children.add(component.deepClone());
 		return self();
 	}
 	
