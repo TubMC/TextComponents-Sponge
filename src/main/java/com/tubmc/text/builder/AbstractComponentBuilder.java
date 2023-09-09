@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import org.jetbrains.annotations.ApiStatus.Internal;
@@ -126,7 +127,8 @@ public sealed abstract class AbstractComponentBuilder<T extends AbstractComponen
 		return self();
 	}
 	
-	public final @NotNull T modify(@NotNull final StagedComponent stagedComponent) {
+	public final @NotNull T modify(@NotNull final Function<@NotNull T, @NotNull StagedComponent> stagedComponentFunction) {
+		stagedComponentFunction.apply(self());
 		return self();
 	}
 	
