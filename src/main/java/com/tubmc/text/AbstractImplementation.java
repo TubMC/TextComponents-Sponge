@@ -50,6 +50,7 @@ abstract class AbstractImplementation {
 		IMPLEMENTATION = this;
 	}
 	/**
+	 * @since 1.0.0
 	 * @param keybind The keybind that the {@link IKeybindComponent} will use
 	 * @return An {@link IKeybindComponent} with {@link IKeybindComponent#getKeybind()} set to the provided keybind
 	 * @see <a href="https://minecraft.fandom.com/wiki/Controls#Configurable_controls">https://minecraft.fandom.com/wiki/Controls#Configurable_controls</a>
@@ -57,12 +58,14 @@ abstract class AbstractImplementation {
 	@Internal
 	public abstract @NotNull IKeybindComponent createKeybind(final @NotNull @DisallowsEmptyString String keybind);
 	/**
+	 * @since 1.0.0
 	 * @param text The text the {@link ILiteralComponent} will represent
 	 * @return An {@link ILiteralComponent} with {@link ILiteralComponent#getMessage()} set to the provided text
 	 */
 	@Internal
 	public abstract @NotNull ILiteralComponent createLiteral(final @NotNull @DisallowsEmptyString String text);
 	/**
+	 * @since 1.0.0
 	 * @param selector A selector that provides one element when queried on the client
 	 * @param objective The scoreboard objective to look up
 	 * @param value An optional value to display, if provided the value yielded by the selector and objective lookup will be ignored
@@ -73,6 +76,7 @@ abstract class AbstractImplementation {
 	@Internal
 	public abstract @NotNull IScoreboardComponent createScoreboard(@NotNull @DisallowsEmptyString final String selector, @NotNull @DisallowsEmptyString final String objective, @Nullable @AllowsEmptyString final String value);
 	/**
+	 * @since 1.0.0
 	 * @param selector The selector the client will look up
 	 * @param seperator An optional {@link IComponent} that will be inserted (by the client) between all that match the selector
 	 * @return An {@link ISelectedComponent} with {@link ISelectedComponent#getSelector()} set to its provided value
@@ -81,6 +85,7 @@ abstract class AbstractImplementation {
 	@Internal
 	public abstract @NotNull ISelectedComponent createSelector(final @NotNull @DisallowsEmptyString String selector, @Nullable final IComponent seperator);
 	/**
+	 * @since 1.0.0
 	 * @param translationKey The translation key the client will look up
 	 * @param fallback The optional value the client will use if the translationKey lookup fails
 	 * @param insertions Insertions to place within the translationKey (inserted by the client)
