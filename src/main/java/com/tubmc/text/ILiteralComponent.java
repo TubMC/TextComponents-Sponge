@@ -30,7 +30,7 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
  * @since 1.0.0
  * @version 1.0.0
  * @see LiteralComponentBuilder
- * @see <a href="https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Plain_Text>https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Plain_Text</a>
+ * @see <a href="https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Plain_Text">https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Plain_Text</a>
  */
 public non-sealed interface ILiteralComponent extends IComponent {
 	/**
