@@ -57,5 +57,4 @@ sealed interface IInteractable permits IComponent {
 	 * @since 1.0.0
 	 */
 	public void setHovering(final @Nullable HoverInteraction<?> interaction);
-	
 }

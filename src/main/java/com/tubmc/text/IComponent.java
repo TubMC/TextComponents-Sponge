@@ -73,5 +73,4 @@ public sealed interface IComponent extends Cloneable, IStyled, IInteractable, Im
 		toReturn.setChildren(this.getChildren().stream().map(IComponent::deepClone).toList());
 		return toReturn;
 	}
-	
 }
