@@ -2,7 +2,7 @@
 
 A cross-platform way to deal with stylised text
 
-##Current Implementations
+## Current Implementations
 
 - [Spigot](https://github.com/TubMC/TextComponents-Spigot)
 
