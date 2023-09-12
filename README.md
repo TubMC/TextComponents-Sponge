@@ -54,7 +54,7 @@ Then add the dependency:
 ```xml
 <dependency>
   <groupId>com.github.BradBot1</groupId>
-  <artifactId>Simple-Events</artifactId>
+  <artifactId>text-components</artifactId>
   <version>LATEST</version>
 </dependency>
 ```
