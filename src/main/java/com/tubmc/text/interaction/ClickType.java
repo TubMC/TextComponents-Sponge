@@ -25,7 +25,7 @@ import com.tubmc.text.IComponent;
  * @version 1.0.0
  * @see ClickInteraction
  */
-public enum ClickType implements IInteractableType<ClickInteraction> {
+public enum ClickType {
 	/**
 	 * Executes the command {@link ClickInteraction#data()}
 	 * 

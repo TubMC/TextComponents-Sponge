@@ -41,5 +41,5 @@ public final record HoverInteraction<T>(
 		 * 
 		 * @since 1.0.0
 		 */
-		@NotNull T data) implements IInteraction<HoverType<T>> {
+		@NotNull T data) {
 }

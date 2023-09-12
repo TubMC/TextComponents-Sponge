@@ -52,7 +52,9 @@ import fun.bb1.objects.defineables.ITypedBuilder;
  */
 @Internal
 public sealed abstract class AbstractComponentBuilder<T extends AbstractComponentBuilder<T>> implements ITypedBuilder<IComponent> permits KeybindComponentBuilder, LiteralComponentBuilder, TranslatableComponentBuilder, SelectorComponentBuilder, ScoreboardComponentBuilder {
-	
+	/**
+	 * Creates an empty builder
+	 */
 	protected AbstractComponentBuilder() {}
 	/**
 	 * The {@link Color} to apply to the {@link IComponent} during {@link #build()}
@@ -499,6 +501,7 @@ public sealed abstract class AbstractComponentBuilder<T extends AbstractComponen
 	/**
 	 * Sets common fields for all {@link IComponent}'s
 	 * 
+	 * @param <C> The {@link IComponent} type
 	 * @param component The {@link IComponent} to apply common features to
 	 * @since 1.0.0
 	 * @return The provided {@link IComponent}
@@ -583,7 +586,7 @@ public sealed abstract class AbstractComponentBuilder<T extends AbstractComponen
 		}
 		/**
 		 * @since 1.0.0
-		 * @param isBold If the element should display as obfuscated
+		 * @param isObfuscated If the element should display as obfuscated
 		 * @see AbstractComponentBuilder#style(Style, Style...)
 		 * @see Style#OBFUSCATED
 		 */

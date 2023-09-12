@@ -43,5 +43,5 @@ public final record ClickInteraction(
 		 * 
 		 * @since 1.0.0
 		 */
-		@NotNull @DisallowsEmptyString String data) implements IInteraction<ClickType> {
+		@NotNull @DisallowsEmptyString String data) {
 }

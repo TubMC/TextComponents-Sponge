@@ -27,7 +27,7 @@ import com.tubmc.text.IComponent;
  * @version 1.0.0
  * @see HoverInteraction
  */
-public final class HoverType<T> implements IInteractableType<HoverInteraction<T>> {
+public final class HoverType<T> {
 	/**
 	 * Displays information about the entity specified
 	 * 

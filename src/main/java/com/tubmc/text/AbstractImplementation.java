@@ -3,11 +3,10 @@ package com.tubmc.text;
 import java.util.Collection;
 
 import org.jetbrains.annotations.ApiStatus.Internal;
-
-import com.tubmc.text.builder.AbstractComponentBuilder;
-
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import com.tubmc.text.builder.AbstractComponentBuilder;
 
 import fun.bb1.objects.annotations.AllowsEmptyString;
 import fun.bb1.objects.annotations.DisallowsEmptyString;

@@ -59,7 +59,7 @@ public final class ScoreboardComponentBuilder extends AbstractComponentBuilder<S
 	 * @param selector The selector to use
 	 * @param objective The objective to use
 	 * @since 1.0.0
-	 * @see IScoreboardComponent#builder(String)
+	 * @see IScoreboardComponent#builder(String, String)
 	 */
 	@Internal
 	public ScoreboardComponentBuilder(@NotNull final String selector, @NotNull final String objective) {
@@ -81,7 +81,6 @@ public final class ScoreboardComponentBuilder extends AbstractComponentBuilder<S
 	 * Sets {@link #value} to null
 	 * 
 	 * @since 1.0.0
-	 * @param value The new {@link #value} to display
 	 * @return The builder instance
 	 */
 	public final @NotNull ScoreboardComponentBuilder noValue() {

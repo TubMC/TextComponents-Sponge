@@ -36,7 +36,7 @@ public non-sealed interface ILiteralComponent extends IComponent {
 	/**
 	 * @since 1.0.0
 	 * @param text The message to use
-	 * @return An instance of {@link ILiteralComponent} where {@link ILiteralComponent#getMessage()()} is set to the provided text
+	 * @return An instance of {@link ILiteralComponent} where {@link ILiteralComponent#getMessage()} is set to the provided text
 	 */
 	public static @NotNull ILiteralComponent of(final @NotNull @AllowsEmptyString String text) {
 		return AbstractImplementation.IMPLEMENTATION.createLiteral(text);

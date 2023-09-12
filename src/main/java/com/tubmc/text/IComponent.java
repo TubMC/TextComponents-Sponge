@@ -38,8 +38,8 @@ public sealed interface IComponent extends Cloneable, IStyled, IInteractable, Im
 	 * Conjoins two {@link IComponent}'s into one
 	 * 
 	 * @since 1.0.0
-	 * @param firstComponent
-	 * @param secondComponent
+	 * @param firstComponent The first {@link IComponent} in the union
+	 * @param secondComponent The second {@link IComponent} in the union
 	 * @return An {@link IComponent} with the provided {@link IComponent}'s as it's children
 	 */
 	public static @NotNull IComponent union(@NotNull final IComponent firstComponent, @NotNull final IComponent secondComponent) {
@@ -55,6 +55,7 @@ public sealed interface IComponent extends Cloneable, IStyled, IInteractable, Im
 	/**
 	 * Overrides the defined children of this {@link IComponent}
 	 * 
+	 * @param newChildrenComponents The new {@link Collection} of {@link IComponent}'s to be set as this {@link IComponent}'s children
 	 * @since 1.0.0
 	 */
 	public void setChildren(@NotNull final Collection<@NotNull IComponent> newChildrenComponents);
