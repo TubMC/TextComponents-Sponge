@@ -5,7 +5,7 @@ A cross-platform way to deal with stylised text
 ## Current Implementations
 
 - [Spigot](https://github.com/TubMC/TextComponents-Spigot)
-- [Paper](https://github.com/TubMC/TextComponents-Fabric)
+- [Fabric](https://github.com/TubMC/TextComponents-Fabric)
 
 ## Installation
 
