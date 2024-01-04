@@ -54,9 +54,9 @@ Then add the dependency:
 
 ```xml
 <dependency>
-  <groupId>com.github.BradBot1</groupId>
-  <artifactId>text-components</artifactId>
-  <version>LATEST</version>
+  <groupId>com.github.TubMC</groupId>
+  <artifactId>TextComponents</artifactId>
+  <version>-SNAPSHOT</version>
 </dependency>
 ```
 
