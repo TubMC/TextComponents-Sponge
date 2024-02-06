@@ -1,0 +1,35 @@
+{
+    "loader": {
+        "name": "java_plain",
+        "version": "1.0"
+    },
+    "license": "Appache 2.0",
+    "global": {
+        "version": "8.0.0",
+        "links": {
+            "homepage": "https://github.com/TubMC/TextComponents",
+            "source": "https://github.com/TubMC/TextComponents-Sponge/tree/sponge8",
+            "issues": "https://github.com/TubMC/TextComponents-Sponge/issues"
+        },
+        "contributors": [
+            {
+                "name": "BradBot_1#2042",
+                "description": "Developer"
+            }
+        ],
+        "dependencies": [
+            {
+                "id": "spongeapi",
+                "version": "8.0.0"
+            }
+        ]
+    },
+    "plugins": [
+        {
+            "id": "textcomponents",
+            "name": "TextComponents",
+            "entrypoint": "com.tubmc.text.Entrypoint",
+            "description": "A TextComponents implementation"
+        }
+    ]
+}
