@@ -67,12 +67,18 @@
 				<configuration>
 					<filters>
 						<filter>
-							<artifact>com.tubmc:text-components</artifact>
+							<artifact>com.tubmc:text-components-adventure</artifact>
 							<excludes>
 								<exclude>com/tubmc/text/ImplementationSpecificComponentMethods.class</exclude>
+								<exclude>net/kyori/**</exclude>
 							</excludes>
 						</filter>
 					</filters>
+					<artifactSet>
+			            <excludes>
+			                <exclude>net.kyori:*</exclude>
+			            </excludes>
+			        </artifactSet>
 				</configuration>
 			</plugin>
 			<plugin>
